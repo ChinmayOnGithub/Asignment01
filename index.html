@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+
+    <div class="navbar">
+        <!-- Button for Theme Toggle -->
+            <img id="mode-icon" src="icons8-sun.svg" style="height: 32px;" alt="Toggle Theme" onclick="toggleTheme()">
+       
+    </div>
+
+    <h1 id="title">My webpage</h1>
+    <p style="text-align: center;">This website belongs to 22610085</p>
+
+    <div class="card">
+        <h2>Goal of this assignment</h2>
+        <ol>
+            <li>Create an index.html page</li>
+            <li>Add CSS stylesheet to the HTML</li>
+            <li>Go to w3school</li>
+        </ol>
+    </div>
+
+    <div class="card">
+        <h1>This is the second card</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo vitae et reiciendis accusantium quibusdam
+            modi sequi aliquam laboriosam, iste esse. Rerum similique atque placeat, incidunt modi itaque molestiae
+            perferendis nemo!
+        </p>
+    </div>
+
+    <script>
+         // Function to toggle theme
+         function toggleTheme() {
+            const body = document.getElementById('body');
+            const icon = document.getElementById('mode-icon');
+
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                icon.src = 'icons8-sun.svg'; // Light theme icon
+            } else {
+                body.classList.add('dark-theme');
+                icon.src = 'icons8-moon.svg'; // Dark theme icon
+            }
+        }
+
+    </script>
+</body>
+
+</html>

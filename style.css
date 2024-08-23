@@ -1,0 +1,67 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    color: #000;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s; /* Add transitions for smooth effect */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    background-color: rgba(255, 128, 43, 0.897);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+/* Title Styles */
+#title {
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Card Styles */
+.card {
+    color: white;
+    background-color: rgb(107, 40, 23);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 12px;
+    transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+
+
+
+/* Style adjustments for the icon (if needed) */
+#mode-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+    background-color: #0b0a25;
+    color: #ddd;
+}
+
+.dark-theme .navbar {
+    background-color: #313642;
+}
+
+.dark-theme .card {
+    background-color: #132668;
+}
+
+/* Adjust the icon for dark theme */
+.dark-theme #mode-icon {
+    filter: invert(1);
+}
