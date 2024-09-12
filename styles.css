@@ -394,22 +394,6 @@ body {
     flex: 1;
 }
 
-/* Section Styles */
-section {
-    padding: 60px 20px;
-    box-sizing: border-box;
-}
-
-section:nth-of-type(odd) {
-    background-color: #e0f7fa;
-    color: #00796b;
-}
-
-section:nth-of-type(even) {
-    background-color: #b2dfdb;
-    color: #004d40;
-}
-
 /* Animation Styles */
 @keyframes fadeIn {
     from {
