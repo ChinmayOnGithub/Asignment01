@@ -2,56 +2,144 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 01</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page with Form</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body id="body">
-
-    <div class="navbar">
-        <!-- Button for Theme Toggle -->
-            <img id="mode-icon" src="icons8-sun.svg" style="height: 32px;" alt="Toggle Theme" onclick="toggleTheme()">
-       
-    </div>
-
-    <h1 id="title">My webpage</h1>
-    <p style="text-align: center;">This website belongs to 22610085</p>
-
-    <div class="card">
-        <h2>Goal of this assignment</h2>
-        <ol>
-            <li>Create an index.html page</li>
-            <li>Add CSS stylesheet to the HTML</li>
-            <li>Go to w3school</li>
-        </ol>
-    </div>
-
-    <div class="card">
-        <h1>This is the second card</h1>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo vitae et reiciendis accusantium quibusdam
-            modi sequi aliquam laboriosam, iste esse. Rerum similique atque placeat, incidunt modi itaque molestiae
-            perferendis nemo!
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p class="announcement-text">
+            Welcome to Walchand College of Engineering, Sangli! Check out our latest
+            updates and announcements here.
         </p>
     </div>
 
-    <script>
-         // Function to toggle theme
-         function toggleTheme() {
-            const body = document.getElementById('body');
-            const icon = document.getElementById('mode-icon');
+    <div class="navbar">
+        <!-- Toggle Button -->
+        <button id="sidebar-toggle" class="sidebar-toggle">Menu</button>
+        <!-- Button for Theme Toggle -->
+        <img id="mode-icon" src="./icons8-sun.svg" alt="Toggle Theme" onclick="toggleTheme()" />
+    </div>
 
-            if (body.classList.contains('dark-theme')) {
-                body.classList.remove('dark-theme');
-                icon.src = 'icons8-sun.svg'; // Light theme icon
+    <div class="container">
+        <!-- Landing Page Content -->
+        <div class="section animated">
+            <h2>Welcome to Walchand College of Engineering, Sangli</h2>
+            <p>
+                At Walchand College of Engineering, we pride ourselves on providing
+                top-notch education and fostering innovation. Our campus offers
+                state-of-the-art facilities and a supportive environment for students
+                to excel in their academic and personal pursuits.
+            </p>
+        </div>
+
+        <div class="card-container">
+            <div class="card animated">
+                <h3>Our Vision</h3>
+                <p>
+                    To be a premier institution of engineering and technology with a
+                    strong commitment to excellence in education and research.
+                </p>
+            </div>
+            <div class="card animated">
+                <h3>Academics</h3>
+                <p>
+                    We offer a range of undergraduate and postgraduate programs designed
+                    to prepare students for successful careers in engineering and
+                    technology.
+                </p>
+            </div>
+            <div class="card animated">
+                <h3>Campus Life</h3>
+                <p>
+                    Our vibrant campus life includes various extracurricular activities,
+                    clubs, and events to enhance the overall student experience.
+                </p>
+            </div>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <div class="image-gallery">
+            <h2>Image Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/200?random=1" alt="Image 1" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/200?random=2" alt="Image 2" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/200?random=3" alt="Image 3" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/200?random=4" alt="Image 4" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/200?random=5" alt="Image 5" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/200?random=6" alt="Image 6" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/200?random=7" alt="Image 7" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/200?random=8" alt="Image 8" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="form-container animated">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="text" placeholder="Subject" required />
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#placement">Placement</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript to Toggle Sidebar
+        document
+            .getElementById("sidebar-toggle")
+            .addEventListener("click", function () {
+                const sidebar = document.getElementById("sidebar");
+                sidebar.classList.toggle("open");
+            });
+    </script>
+
+    <script>
+        // JavaScript for Theme Toggle
+        function toggleTheme() {
+            const body = document.getElementById("body");
+            const icon = document.getElementById("mode-icon");
+            body.classList.toggle("dark-mode");
+
+            if (body.classList.contains("dark-mode")) {
+                icon.src = "./icons8-moon.svg"; // Updated URL
             } else {
-                body.classList.add('dark-theme');
-                icon.src = 'icons8-moon.svg'; // Dark theme icon
+                icon.src = "./icons8-sun.svg";
             }
         }
-
     </script>
 </body>
 
